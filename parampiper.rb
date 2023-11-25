@@ -5,31 +5,31 @@
 class Parampiper < Formula
   desc "parampiper"
   homepage ""
-  version "0.0.3-alpha"
+  version "0.0.4-alpha"
 
   on_macos do
-    url "https://github.com/cdalar/parampiper/releases/download/v0.0.3-alpha/parampiper-darwin-amd64.tar.gz"
-    sha256 "c9be7245cec7396024d8f32ccef4669c6968f2221b21ee782453acc5af02eaf9"
-
-    def install
-      bin.install "parampiper"
-    end
-
     if Hardware::CPU.arm?
-      def caveats
-        <<~EOS
-          The darwin_arm64 architecture is not supported for the Parampiper
-          formula at this time. The darwin_amd64 binary may work in compatibility
-          mode, but it might not be fully supported.
-        EOS
+      url "https://github.com/cdalar/parampiper/releases/download/v0.0.4-alpha/parampiper-darwin-arm64.tar.gz"
+      sha256 "4c6f5e36d701ccc8507e9fc4074d1e22f191c57c072a76fabc73159567090bb6"
+
+      def install
+        bin.install "parampiper"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/cdalar/parampiper/releases/download/v0.0.4-alpha/parampiper-darwin-amd64.tar.gz"
+      sha256 "79f517314bd774c61b0a12ea21b94aded4c41221b1ecaf26afe66115861702c4"
+
+      def install
+        bin.install "parampiper"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cdalar/parampiper/releases/download/v0.0.3-alpha/parampiper-linux-amd64.tar.gz"
-      sha256 "2be248ed4b5a55861784f78adf0aba987ee134402a19bce49600536042ef3cb2"
+      url "https://github.com/cdalar/parampiper/releases/download/v0.0.4-alpha/parampiper-linux-amd64.tar.gz"
+      sha256 "d5d72d11b7792d5bc96d4d52826c941dca2b58073dabdf799fa6e42f8397efa0"
 
       def install
         bin.install "parampiper"
