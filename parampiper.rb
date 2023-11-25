@@ -5,11 +5,11 @@
 class Parampiper < Formula
   desc "parampiper"
   homepage ""
-  version "0.0.1-alpha-2"
+  version "0.0.2-alpha"
 
   on_macos do
-    url "https://github.com/cdalar/parampiper/releases/download/v0.0.1-alpha-2/parampiper-darwin-amd64.tar.gz"
-    sha256 "74fe4bf81c8d3bd87ca26fc6ca26683cfac90ad1695d8d3e75f3379b30624086"
+    url "https://github.com/cdalar/parampiper/releases/download/v0.0.2-alpha/parampiper-darwin-amd64.tar.gz"
+    sha256 "52e3c0efc9cc48af48eeb73b7593b80dbe3b65659fc6c724a821bf004b5c17c9"
 
     def install
       bin.install "pp"
@@ -28,8 +28,8 @@ class Parampiper < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cdalar/parampiper/releases/download/v0.0.1-alpha-2/parampiper-linux-amd64.tar.gz"
-      sha256 "e410972be37d726f477c17c8a82550aeb803b18e11035cd0eb3a96d1779420c7"
+      url "https://github.com/cdalar/parampiper/releases/download/v0.0.2-alpha/parampiper-linux-amd64.tar.gz"
+      sha256 "b18b84b0bd3457c647c356ebf03817d81d268e0f0dca7b9bdab67cd940a65c15"
 
       def install
         bin.install "pp"
