@@ -5,20 +5,20 @@
 class Parampiper < Formula
   desc "parampiper"
   homepage ""
-  version "0.0.9-alpha"
+  version "0.0.10-alpha"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/cdalar/parampiper/releases/download/v0.0.9-alpha/parampiper-darwin-arm64.tar.gz"
-      sha256 "5a8688fbcd287a2a87ebf53cddff3723db7f6d05704f8f52643506a035a9de67"
+    if Hardware::CPU.intel?
+      url "https://github.com/cdalar/parampiper/releases/download/v0.0.10-alpha/parampiper-darwin-amd64.tar.gz"
+      sha256 "08f23fe8b0b446d94b53d0c66c98a43a9d4f15466dbd22eca0dc8767772782b3"
 
       def install
         bin.install "parampiper"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/cdalar/parampiper/releases/download/v0.0.9-alpha/parampiper-darwin-amd64.tar.gz"
-      sha256 "5f0cf3648f84c50bcec3cbd94cfd7815b44f2abd5d6c273828baf5c21fca6ba8"
+    if Hardware::CPU.arm?
+      url "https://github.com/cdalar/parampiper/releases/download/v0.0.10-alpha/parampiper-darwin-arm64.tar.gz"
+      sha256 "5acd9205db55fde9be18fa9b0a67fd9633410da3eb15d5d6a928c614da2ae05a"
 
       def install
         bin.install "parampiper"
@@ -28,8 +28,8 @@ class Parampiper < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cdalar/parampiper/releases/download/v0.0.9-alpha/parampiper-linux-amd64.tar.gz"
-      sha256 "6340c346aa0f746b386623182f552cea83c11bea3fdebc7fef271ebb11c9330f"
+      url "https://github.com/cdalar/parampiper/releases/download/v0.0.10-alpha/parampiper-linux-amd64.tar.gz"
+      sha256 "98fe0ca76e9bb868568e9a8525ff656823e2f19da4ad191dc59497180950bb71"
 
       def install
         bin.install "parampiper"
