@@ -5,20 +5,20 @@
 class Parampiper < Formula
   desc "parampiper"
   homepage ""
-  version "0.0.11-alpha"
+  version "0.0.12-alpha"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cdalar/parampiper/releases/download/v0.0.11-alpha/parampiper-darwin-arm64.tar.gz"
-      sha256 "26f8a28f92c00f751ad8182c49e0a4c1eb1925434962b47eab911c8d5aa97214"
+      url "https://github.com/cdalar/parampiper/releases/download/v0.0.12-alpha/parampiper-darwin-arm64.tar.gz"
+      sha256 "77ce86a6e9b7ae994c87b59d460c2a4e063d0b0c97a5c3b2381e66bba4963a92"
 
       def install
         bin.install "parampiper"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cdalar/parampiper/releases/download/v0.0.11-alpha/parampiper-darwin-amd64.tar.gz"
-      sha256 "48bf59db065688357acf46a754c9cbc7ed93d924efd61187225667b24b5df2e1"
+      url "https://github.com/cdalar/parampiper/releases/download/v0.0.12-alpha/parampiper-darwin-amd64.tar.gz"
+      sha256 "428e006142c318615af5c6b4cc484224cf47371395299a0cc4728785f29fb05a"
 
       def install
         bin.install "parampiper"
@@ -28,8 +28,8 @@ class Parampiper < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cdalar/parampiper/releases/download/v0.0.11-alpha/parampiper-linux-amd64.tar.gz"
-      sha256 "487b4cc8ab6d2fe31f6c73e07d5737d9a83cd5d0caa232f174d1e85ac9d82241"
+      url "https://github.com/cdalar/parampiper/releases/download/v0.0.12-alpha/parampiper-linux-amd64.tar.gz"
+      sha256 "e918c5918bac2e31c48fcf2ca2acd33fc5146228eec5e88dc98ad7d718891dbf"
 
       def install
         bin.install "parampiper"
