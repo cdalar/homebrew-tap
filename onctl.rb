@@ -5,31 +5,31 @@
 class Onctl < Formula
   desc "onctl"
   homepage ""
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
-    url "https://github.com/cdalar/onctl/releases/download/v0.0.5/onctl-darwin-amd64.tar.gz"
-    sha256 "7f2a592364a1af88471edff4efb8e051e535c6f4427d02da1e5ec9ca90506bbc"
-
-    def install
-      bin.install "onctl"
-    end
-
     if Hardware::CPU.arm?
-      def caveats
-        <<~EOS
-          The darwin_arm64 architecture is not supported for the Onctl
-          formula at this time. The darwin_amd64 binary may work in compatibility
-          mode, but it might not be fully supported.
-        EOS
+      url "https://github.com/cdalar/onctl/releases/download/v0.0.6/onctl-darwin-arm64.tar.gz"
+      sha256 "8e48a39a0c9b65403165e6e93c7b04422c5bc9e7992d82191330af0056a6c7e8"
+
+      def install
+        bin.install "onctl"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/cdalar/onctl/releases/download/v0.0.6/onctl-darwin-amd64.tar.gz"
+      sha256 "8bb8ec4f964cf0625741b05452530862faa16a972140dee5320edd2c0daf62ff"
+
+      def install
+        bin.install "onctl"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cdalar/onctl/releases/download/v0.0.5/onctl-linux-amd64.tar.gz"
-      sha256 "99afee5b1bd5309f1c8f2571d80b4c54923fc5365e0664f1c1dc4e6043d328bd"
+      url "https://github.com/cdalar/onctl/releases/download/v0.0.6/onctl-linux-amd64.tar.gz"
+      sha256 "75cddfdb3c3a5497462d2533994ba0d30f9268b248bbb55c00e957b4b778a6ca"
 
       def install
         bin.install "onctl"
