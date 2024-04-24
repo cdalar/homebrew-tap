@@ -5,20 +5,20 @@
 class Onctl < Formula
   desc "onctl"
   homepage ""
-  version "0.1.12"
+  version "0.1.13"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cdalar/onctl/releases/download/v0.1.12/onctl-darwin-amd64.tar.gz"
-      sha256 "9f3dff3cffadee72ab042449c7b25b263862a4f641719b49da2f3584c57b4a8b"
+      url "https://github.com/cdalar/onctl/releases/download/v0.1.13/onctl-darwin-amd64.tar.gz"
+      sha256 "9ce984b45d28104f258f9e75c67d5f2db354920ddb5d0d2585aa5c0604b7f775"
 
       def install
         bin.install "onctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cdalar/onctl/releases/download/v0.1.12/onctl-darwin-arm64.tar.gz"
-      sha256 "6fad91534f2fc484debdee1576ed9a22b3d2492f87e81796708446fc7c95cb5e"
+      url "https://github.com/cdalar/onctl/releases/download/v0.1.13/onctl-darwin-arm64.tar.gz"
+      sha256 "65f9267036c10a72d2589977dd6a877f544bbedb06d30a9672fa81c9ac1e7750"
 
       def install
         bin.install "onctl"
@@ -28,8 +28,8 @@ class Onctl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cdalar/onctl/releases/download/v0.1.12/onctl-linux-amd64.tar.gz"
-      sha256 "21ec2a94415bb5cd5aa5f8195869f45e995a8fd62c51ea9d410e5c58ba2176e0"
+      url "https://github.com/cdalar/onctl/releases/download/v0.1.13/onctl-linux-amd64.tar.gz"
+      sha256 "ea54b43fe98c20ea5c3d7004c4b223ae086602565e14b69bd5b78729906ae717"
 
       def install
         bin.install "onctl"
