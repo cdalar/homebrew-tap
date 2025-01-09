@@ -5,20 +5,20 @@
 class Onctl < Formula
   desc "onctl"
   homepage ""
-  version "0.1.19"
+  version "0.1.20"
 
   on_macos do
-    on_intel do
-      url "https://github.com/cdalar/onctl/releases/download/v0.1.19/onctl-darwin-amd64.tar.gz"
-      sha256 "55c96fb4ddb0598f2ffdfd2a5b246d82580cdbd73b4923be4ed0b89e9614ac94"
+    if Hardware::CPU.intel?
+      url "https://github.com/cdalar/onctl/releases/download/v0.1.20/onctl-darwin-amd64.tar.gz"
+      sha256 "94a14ac856c01d82487a61fb443d6ba16052a7cf0848323c4a20586f1437c013"
 
       def install
         bin.install "onctl"
       end
     end
-    on_arm do
-      url "https://github.com/cdalar/onctl/releases/download/v0.1.19/onctl-darwin-arm64.tar.gz"
-      sha256 "2e8ece46d038d793b589d9f1bfc35cc5609579630e99c5644e88dc95d9ea8e20"
+    if Hardware::CPU.arm?
+      url "https://github.com/cdalar/onctl/releases/download/v0.1.20/onctl-darwin-arm64.tar.gz"
+      sha256 "bcd275c67fa3813d1278d3b9a44ea156dc63d262dbad06c1d6677917468176ff"
 
       def install
         bin.install "onctl"
@@ -27,20 +27,20 @@ class Onctl < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cdalar/onctl/releases/download/v0.1.19/onctl-linux-amd64.tar.gz"
-        sha256 "efac2bef75f0734a084cce2d7f608aa6ebb99a516b4236bc83c73160ed760b02"
+        url "https://github.com/cdalar/onctl/releases/download/v0.1.20/onctl-linux-amd64.tar.gz"
+        sha256 "f2cc41e86a45df3932529f235b3f8232003957475d731627cb9ac517b5e683f1"
 
         def install
           bin.install "onctl"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cdalar/onctl/releases/download/v0.1.19/onctl-linux-arm64.tar.gz"
-        sha256 "24b554edb0dc78b011845e30044f1bd329fdff238a665d9d74d70732ddb0635b"
+        url "https://github.com/cdalar/onctl/releases/download/v0.1.20/onctl-linux-arm64.tar.gz"
+        sha256 "3ad22de01644827df1a7509accc4a5bf3c9e0dbd5555dcd32c867f6affda6e99"
 
         def install
           bin.install "onctl"
