@@ -3,14 +3,14 @@ class OnctlUnstable < Formula
   homepage "https://github.com/cdalar/onctl"
   head "https://github.com/cdalar/onctl.git", branch: "main"
 
-  depends_on "go" => :build # Ensure Go is available for building
-  
+  depends_on "go" => :build
+
   def install
     system "make"
-    bin.install "onctl" # Replace "onctl" with the actual name of the built binary
+    bin.install "onctl" => "onctl-unstable"
   end
 
   test do
-    system "#{bin}/onctl", "version" # Replace with an appropriate test for your tool
+    system "#{bin}/onctl-unstable", "version"
   end
 end
