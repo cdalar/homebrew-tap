@@ -1,5 +1,5 @@
 class OnctlUnstable < Formula
-  desc "Unstable version of the onctl tool"
+  desc "Nightly/HEAD version of the onctl tool"
   homepage "https://github.com/cdalar/onctl"
   head "https://github.com/cdalar/onctl.git", branch: "main"
 
@@ -7,10 +7,10 @@ class OnctlUnstable < Formula
 
   def install
     system "make"
-    bin.install "onctl" => "onctl-unstable"
+    bin.install "onctl" => "xonctl"
   end
 
   test do
-    system "#{bin}/onctl-unstable", "version"
+    system "#{bin}/xonctl", "version"
   end
 end
