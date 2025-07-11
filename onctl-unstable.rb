@@ -1,4 +1,4 @@
-class OnctlUnstable < Formula
+class Xonctl < Formula
   desc "Nightly/HEAD version of the onctl tool"
   homepage "https://github.com/cdalar/onctl"
   head "https://github.com/cdalar/onctl.git", branch: "main"
