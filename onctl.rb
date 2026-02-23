@@ -5,46 +5,40 @@
 class Onctl < Formula
   desc "onctl"
   homepage ""
-  version "0.1.21"
+  version "0.1.22"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cdalar/onctl/releases/download/v0.1.21/onctl-darwin-amd64.tar.gz"
-      sha256 "e6cebc68c96848ba637608ad6a797a564259ff28a9c8ceb00da62e5a65d85f15"
+      url "https://github.com/cdalar/onctl/releases/download/v0.1.22/onctl-darwin-amd64.tar.gz"
+      sha256 "466807339c13ba3fa901305c7c2c751be5169bc631d8e1aef38472c86012cd56"
 
-      def install
+      define_method(:install) do
         bin.install "onctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cdalar/onctl/releases/download/v0.1.21/onctl-darwin-arm64.tar.gz"
-      sha256 "28178585bf2373bdd3104997c2dafa20167cc77bfbdc8d2a50cb4a3855528132"
+      url "https://github.com/cdalar/onctl/releases/download/v0.1.22/onctl-darwin-arm64.tar.gz"
+      sha256 "b5b0a5adb693ea250cf4d8ad77e6ab33187dec448f7b27cd11763e347c1be98b"
 
-      def install
+      define_method(:install) do
         bin.install "onctl"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/cdalar/onctl/releases/download/v0.1.21/onctl-linux-amd64.tar.gz"
-        sha256 "6870e61bc1ad1b0ad1dd012a4f099eebc99bb01d37489b41cbe7606af3d83d4d"
-
-        def install
-          bin.install "onctl"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/cdalar/onctl/releases/download/v0.1.22/onctl-linux-amd64.tar.gz"
+      sha256 "68a2f5defd87a27a2d1355c0311141b789495a110b1ee55df0a8ba2517ac9d3e"
+      define_method(:install) do
+        bin.install "onctl"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/cdalar/onctl/releases/download/v0.1.21/onctl-linux-arm64.tar.gz"
-        sha256 "9c702333a6e4cc85bcbe42a04983925c096de740f7d1bc47778947d3f10a2013"
-
-        def install
-          bin.install "onctl"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/cdalar/onctl/releases/download/v0.1.22/onctl-linux-arm64.tar.gz"
+      sha256 "c44598f8ec628cb2804cdeb0d09c5d6ee51db37d9978a8249d193add050d8db9"
+      define_method(:install) do
+        bin.install "onctl"
       end
     end
   end
