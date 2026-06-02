@@ -5,20 +5,20 @@
 class Onctl < Formula
   desc "onctl"
   homepage ""
-  version "0.1.22"
+  version "0.1.23"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cdalar/onctl/releases/download/v0.1.22/onctl-darwin-amd64.tar.gz"
-      sha256 "466807339c13ba3fa901305c7c2c751be5169bc631d8e1aef38472c86012cd56"
+      url "https://github.com/cdalar/onctl/releases/download/v0.1.23/onctl-darwin-amd64.tar.gz"
+      sha256 "f182670ada57fca35418321aa55e16f3fa6ce115f3a9002466cd820858d21d71"
 
       define_method(:install) do
         bin.install "onctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cdalar/onctl/releases/download/v0.1.22/onctl-darwin-arm64.tar.gz"
-      sha256 "b5b0a5adb693ea250cf4d8ad77e6ab33187dec448f7b27cd11763e347c1be98b"
+      url "https://github.com/cdalar/onctl/releases/download/v0.1.23/onctl-darwin-arm64.tar.gz"
+      sha256 "450d3900ef6b8abaa2194214026b63e7ce75797e5ca941cfff40cd4c87c229fc"
 
       define_method(:install) do
         bin.install "onctl"
@@ -28,15 +28,15 @@ class Onctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cdalar/onctl/releases/download/v0.1.22/onctl-linux-amd64.tar.gz"
-      sha256 "68a2f5defd87a27a2d1355c0311141b789495a110b1ee55df0a8ba2517ac9d3e"
+      url "https://github.com/cdalar/onctl/releases/download/v0.1.23/onctl-linux-amd64.tar.gz"
+      sha256 "ca90c165bd0f59ec2b34500678f42a7e94e0b44a37a5c1b4f9b1d137b99b2ee1"
       define_method(:install) do
         bin.install "onctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cdalar/onctl/releases/download/v0.1.22/onctl-linux-arm64.tar.gz"
-      sha256 "c44598f8ec628cb2804cdeb0d09c5d6ee51db37d9978a8249d193add050d8db9"
+      url "https://github.com/cdalar/onctl/releases/download/v0.1.23/onctl-linux-arm64.tar.gz"
+      sha256 "bc9f3c6ac339e81c80eb9ab9b8b9cdba3f0d57b1a430b5916961469ae3f4257e"
       define_method(:install) do
         bin.install "onctl"
       end
